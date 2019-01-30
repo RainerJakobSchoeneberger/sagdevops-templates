@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #*******************************************************************************
-#  Copyright © 2013 - 2018 Software AG, Darmstadt, Germany and/or its licensors
+#  Copyright Â© 2013 - 2018 Software AG, Darmstadt, Germany and/or its licensors
 #
 #   SPDX-License-Identifier: Apache-2.0
 #
@@ -37,6 +37,9 @@ if [ -d $SAG_HOME/profiles/SPM ] ; then
 
     echo "Start the instance ..."
     sagcc exec lifecycle components CEL start -e DONE --sync-job
+    
+    echo "tailing logs"
+	sagcc get diagnostics logs CEL SAG_EventDataStore.log tail lines=100 -e initialized
 
     echo "Verifying status ..."
     sagcc get monitoring runtimestatus CEL -e ONLINE
