@@ -21,7 +21,7 @@
 
 The current template provisions an EntireX Broker.
 
-This template demonstrates in detail how to install the EntireX Broker component, creates and configures an EntireX Broker. Use this template as a reference when provisioning an EntireX Broker instances.
+This template demonstrates in detail how to install the EntireX Broker component, creates and configures an EntireX Broker. Use this template as a reference when provisioning an EntireX Broker instance.
 
 ## Requirements
 
